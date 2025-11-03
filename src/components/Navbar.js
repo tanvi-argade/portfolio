@@ -15,9 +15,9 @@ const Navbar = ({ theme, toggleTheme }) => {
   };
 
   const openResume = () => {
-    // Replace with your actual resume file link
-    window.open("/Tanvi_Argade_Resume.pdf", "_blank");
-  };
+  window.open(`${process.env.PUBLIC_URL}/Tanvi_Argade_Resume.pdf`, "_blank");
+};
+
 
   return (
     <nav className="navbar">
