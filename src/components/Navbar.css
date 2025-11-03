@@ -1,0 +1,126 @@
+/* Better specificity to override old CSS */
+/* NAVBAR */
+.navbar {
+  width: 100% !important;
+  padding: 14px 0 !important;
+  position: fixed !important;
+  top: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  backdrop-filter: blur(14px) !important;
+  background: rgba(16, 5, 32, 0.36) !important;
+  border-bottom: 1px solid rgba(138,0,255,0.15) !important;
+  z-index: 500 !important;
+  transition: background 300ms ease !important;
+}
+
+[data-theme="light"] .navbar {
+  background: rgba(255, 255, 255, 0.72) !important;
+  border-bottom: 1px solid rgba(138,0,255,0.22) !important;
+  box-shadow: 0 2px 12px rgba(138,0,255,0.12) !important;
+}
+
+/* Center links */
+.nav-links {
+  display: flex !important;
+  list-style: none !important;
+  gap: 50px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Links */
+.nav-links a {
+  color: var(--text-color) !important;
+  font-size: 1.08rem !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  position: relative !important;
+  padding-bottom: 4px !important;
+  transition: color 200ms ease !important;
+}
+
+/* Underline hover prep */
+.nav-links a::after {
+  content: "" !important;
+  position: absolute !important;
+  width: 0 !important;
+  height: 2px !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  background: var(--accent) !important;
+  border-radius: 5px !important;
+  transition: width 260ms cubic-bezier(.23,1,.32,1) !important;
+}
+
+/* Hover */
+.nav-links a:hover {
+  color: var(--accent) !important;
+}
+
+.nav-links a:hover::after {
+  width: 100% !important;
+}
+
+/* ACTIVE SECTION highlight */
+.nav-links a.active {
+  color: var(--accent) !important;
+}
+
+.nav-links a.active::after {
+  width: 100% !important;
+}
+
+/* Theme toggle */
+.theme-toggle {
+  position: absolute !important;
+  right: 28px !important;
+  background: none !important;
+  border: none !important;
+  font-size: 1.35rem !important;
+  cursor: pointer !important;
+  color: var(--text-color) !important;
+  transition: transform 220ms ease !important;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.18) rotate(13deg) !important;
+}
+
+[data-theme="light"] .theme-toggle {
+  color: #6b00c8 !important;
+}
+.nav-links .nav-btn {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0;
+  position: relative;
+  transition: color 200ms ease;
+}
+
+/* Hover and underline animation reuse */
+.nav-links .nav-btn::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: var(--accent);
+  border-radius: 5px;
+  transition: width 260ms cubic-bezier(.23,1,.32,1);
+}
+
+.nav-links .nav-btn:hover {
+  color: var(--accent);
+}
+
+.nav-links .nav-btn:hover::after {
+  width: 100%;
+}

@@ -1,0 +1,267 @@
+.contact {
+  padding: 80px 0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.contact .section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.contact-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  color: var(--muted);
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contact-socials {
+  flex: 1 1 300px;
+  text-align: center;
+  min-width: 260px;
+}
+
+
+.contact-socials h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icons a {
+  font-size: 1.7rem;
+  color: var(--text);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: var(--accent);
+}
+
+/* 🌙 Refined Contact Form Styling */
+.contact-form {
+  flex: 1 1 420px;
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2.4rem;
+  border-radius: 18px;
+  background: var(--card-bg);
+  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(16px);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* faint border aura */
+.contact-form::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--accent-light), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* Input Group */
+.input-group {
+  position: relative;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  background: transparent;
+  border: 1.6px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  color: var(--text);
+  outline: none;
+  resize: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* floating labels */
+.input-group label {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  font-size: 0.95rem;
+  color: var(--muted);
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+
+/* glowing focus states */
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 10px var(--accent-light);
+  background: rgba(108, 99, 255, 0.05);
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group textarea:focus + label,
+.input-group textarea:valid + label {
+  top: -9px;
+  left: 10px;
+  font-size: 0.8rem;
+  background: var(--card-bg);
+  padding: 0 6px;
+  color: var(--accent);
+}
+
+/* 💌 Send Button */
+.send-btn {
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 0 16px rgba(108, 99, 255, 0.3);
+}
+
+.send-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 0 24px rgba(108, 99, 255, 0.45);
+}
+
+.sent-msg {
+  text-align: center;
+  color: var(--accent);
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}
+
+.contact {
+  --accent: #6c63ff;
+  --accent-hover: #5952d4;
+  --accent-light: rgba(108, 99, 255, 0.4);
+  --text: #222;
+  --muted: #666;
+  --card-bg: #fff;
+  --border: #ccc;
+}
+
+.dark-mode .contact {
+  --accent: #8a7fff;
+  --accent-hover: #a298ff;
+  --accent-light: rgba(162, 152, 255, 0.4);
+  --text: #f0f0f0;
+  --muted: #b4b4b4;
+  --card-bg: #181818;
+  --border: #333;
+}
+/* 🌌 Cosmic Hover Glow for Social Icons */
+.social-icons a {
+  position: relative;
+  font-size: 1.9rem;
+  color: var(--text);
+  transition: color 0.35s ease, transform 0.3s ease, text-shadow 0.4s ease;
+}
+
+.social-icons a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 18px transparent;
+  transition: box-shadow 0.4s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px) scale(1.15);
+  color: var(--accent);
+  text-shadow: 0 0 12px var(--accent-light), 0 0 24px var(--accent);
+}
+
+.social-icons a:hover::after {
+  box-shadow: 0 0 22px var(--accent-light), 0 0 36px var(--accent);
+}
+
+/* Optional: subtle pulsing effect */
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.social-icons a {
+  color: var(--accent);
+}
+
+.social-icons a:hover {
+  animation: iconPulse 1.2s infinite ease-in-out;
+}
+
+/* 🎇 Soft tilt + glow when revealed */
+[data-aos="fade-left"] {
+  transform: translateX(50px) rotateY(6deg);
+  opacity: 0;
+  transition: all 0.9s ease-out;
+}
+
+[data-aos="fade-left"].aos-animate {
+  transform: translateX(0) rotateY(0deg);
+  opacity: 1;
+}
+
+[data-aos="fade-right"] {
+  transform: translateX(-50px) rotateY(-6deg);
+  opacity: 0;
+  transition: all 0.9s ease-out;
+}
+
+[data-aos="fade-right"].aos-animate {
+  transform: translateX(0) rotateY(0deg);
+  opacity: 1;
+}

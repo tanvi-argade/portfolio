@@ -1,0 +1,41 @@
+.theme-toggle {
+  position: fixed;
+  top: 18px;
+  right: 22px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 1300;
+  transition: transform 260ms cubic-bezier(.2,.9,.2,1), background 320ms ease, box-shadow 320ms ease;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 24px rgba(10, 10, 20, 0.32);
+  font-size: 18px;
+}
+
+/* dark icon background */
+[data-theme="dark"] .theme-toggle {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  color: #ffd86b;
+  transform-origin: center;
+}
+
+/* light icon background */
+[data-theme="light"] .theme-toggle {
+  background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.02));
+  color: #3a2b6b;
+}
+
+/* Icon animations */
+.theme-toggle .icon {
+  display: inline-block;
+  transition: transform 420ms cubic-bezier(.2,.9,.2,1), opacity 260ms ease;
+  will-change: transform, opacity;
+}
+
+/* playful rotation on click/hover */
+.theme-toggle:hover { transform: rotate(6deg) scale(1.08); }
+.theme-toggle:active { transform: rotate(0deg) scale(0.98); }

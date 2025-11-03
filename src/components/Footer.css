@@ -1,0 +1,39 @@
+.footer {
+  text-align: center;
+  padding: 18px 0;
+  background: rgba(16, 5, 32, 0.3);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(138, 0, 255, 0.18);
+  font-size: 0.95rem;
+  color: var(--text-color);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+[data-theme="light"] .footer {
+  background: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid rgba(138, 0, 255, 0.22);
+  color: #333;
+}
+
+.footer-name {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.heart {
+  display: inline-block;
+  animation: pulse 1.4s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    color: #ff2d55;
+  }
+  50% {
+    transform: scale(1.2);
+    color: #ff66a3;
+  }
+}

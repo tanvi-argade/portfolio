@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+/* ---------------------------
+   Global Theme Variables
+   Purple Galaxy Edition
+--------------------------- */
+
+:root {
+  /* Light Theme Defaults */
+  --bg: #e8e1ff; /* lavender sky */
+  --text: #13092c;
+  --muted: rgba(19, 9, 44, 0.75);
+
+  /* Single source of truth for UI color */
+  --text-color: #232232;
+
+  /* Universal accent for icons/underlines/buttons */
+  --accent: #8a00ff;
+  --accent-gradient: linear-gradient(135deg, #8a00ff, #4b00c9);
+
+  --btn-glow-shadow: 0 10px 32px rgba(138, 0, 255, 0.22);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Dark Theme Overrides */
+[data-theme="dark"] {
+  --bg: #0d0d16;
+  --surface: #0f1120;
+  --text: #ffffff;
+  --muted: rgba(255, 255, 255, 0.85);
+
+  --text-color: #fdfdfd;
+  --accent: #bb86ff;
+  --accent-gradient: linear-gradient(135deg,#9b00ff,#0044ff);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Light theme overrides */
+[data-theme="light"] {
+  --text: #13092c;
+  --text-color: #232232;
+  --accent: #8a00ff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+/* ---------------------------
+   Global Base Styles
+--------------------------- */
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background 320ms ease, color 320ms ease;
 }
 
-.App-link {
-  color: #61dafb;
+/* Smarter anchor reset (inherit theme) */
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Container helper */
+.container {
+  width: min(1100px, 94%);
+  margin: 0 auto;
+}
+html {
+  scroll-behavior: smooth;
 }
