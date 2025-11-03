@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.ac9fe96a.css",
+    "main.js": "/portfolio/static/js/main.56e5a183.js",
+    "static/js/453.c6a9083d.chunk.js": "/portfolio/static/js/453.c6a9083d.chunk.js",
+    "static/media/1.png": "/portfolio/static/media/1.3de415ad12d993524218.png",
+    "static/media/AttendanceSystem.png": "/portfolio/static/media/AttendanceSystem.6cc9a4b2c81708059bf5.png",
+    "static/media/3.png": "/portfolio/static/media/3.6a26aa2a2d7185976f54.png",
+    "static/media/2.png": "/portfolio/static/media/2.a1aef4b41c9598f42955.png",
+    "static/media/PaperPulse.png": "/portfolio/static/media/PaperPulse.dafff31beaa6a0a0a69c.png",
+    "static/media/8.png": "/portfolio/static/media/8.750196290e00b1f92ea9.png",
+    "static/media/12.png": "/portfolio/static/media/12.59b731cdd270b1ed0aeb.png",
+    "static/media/7.png": "/portfolio/static/media/7.ada8bce2f03d8cd5db53.png",
+    "static/media/6.png": "/portfolio/static/media/6.4b18c7591d1b8b65a895.png",
+    "static/media/11.png": "/portfolio/static/media/11.b805a9feb319e26908e2.png",
+    "static/media/profile.jpg": "/portfolio/static/media/profile.5ca05415d607ee35cdcb.jpg",
+    "static/media/9.png": "/portfolio/static/media/9.baae3e7856410c1ac5aa.png",
+    "static/media/CLCG.png": "/portfolio/static/media/CLCG.fd52b25bb50e3e0d0285.png",
+    "static/media/10.png": "/portfolio/static/media/10.b86dd6c39a3910f974f0.png",
+    "static/media/5.png": "/portfolio/static/media/5.20b206134663eadab864.png",
+    "static/media/4.png": "/portfolio/static/media/4.5a037c3a6ad48fc40896.png",
+    "static/media/1.jpeg": "/portfolio/static/media/1.fe7b4196281fb0f7dc33.jpeg",
+    "static/media/ShortNotes.jpeg": "/portfolio/static/media/ShortNotes.7b8149129d4fd0c27746.jpeg",
+    "static/media/3.jpeg": "/portfolio/static/media/3.2f32958aea4d4ac851db.jpeg",
+    "static/media/4.jpeg": "/portfolio/static/media/4.491ed35556e482a6ef60.jpeg",
+    "static/media/2.jpeg": "/portfolio/static/media/2.87497a5476de1961ae63.jpeg",
+    "index.html": "/portfolio/index.html",
+    "main.ac9fe96a.css.map": "/portfolio/static/css/main.ac9fe96a.css.map",
+    "main.56e5a183.js.map": "/portfolio/static/js/main.56e5a183.js.map",
+    "453.c6a9083d.chunk.js.map": "/portfolio/static/js/453.c6a9083d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ac9fe96a.css",
+    "static/js/main.56e5a183.js"
+  ]
+}
