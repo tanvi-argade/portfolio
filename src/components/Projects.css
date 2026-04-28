@@ -1,283 +1,88 @@
-/* Section base */
-.projects {
-  padding: 90px 0;
-  color: var(--text);
-}
-
-/* Grid of cards */
-.project-grid {
+.projects-grid {
   display: grid;
-  gap: 28px;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-  margin-top: 32px;
-  perspective: 1000px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 32px;
 }
 
-/* Project Card */
 .project-card {
-  background: rgba(255,255,255,0.04);
-  backdrop-filter: blur(6px);
-  border-radius: 14px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 260ms ease, box-shadow 260ms ease, background 260ms ease;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 32px;
   display: flex;
   flex-direction: column;
-  min-height: 380px;
-  border: 1px solid rgba(255,255,255,0.06);
+  justify-content: space-between;
+  transition: var(--transition);
 }
-[data-theme="light"] .project-card {
-  background: rgba(255,255,255,0.9);
-  border: 1px solid rgba(0,0,0,0.05);
-}
+
 .project-card:hover {
-  transform: translateY(-10px) rotateX(4deg);
-  box-shadow: 0 16px 45px rgba(109,0,255,0.18);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: var(--accent);
 }
 
-/* Cover Image */
-.card-cover {
-  height: 260px;
-  width: 100%;
-  overflow: hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background: rgba(147,100,255,0.06);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-.card-cover img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.card-header h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
 }
 
-/* Info Section */
-.project-info {
-  padding: 16px 18px;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  flex:1;
-}
-.project-info h3 { margin:0; font-size:1.22rem; }
-.muted { color: var(--muted); font-size:0.95rem; }
-
-/* Tech Icons in Card */
-.tech-icons.small i {
-  margin-right: 10px;
-  font-size: 1.25rem;
-  filter: drop-shadow(0 0 4px rgba(128,0,255,0.4));
+.card-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0;
 }
 
-/* ===== Modal Overlay ===== */
-.pp-modal-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 1600;
-  display:flex;
+.tech-chip {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  background: rgba(5,7,14,0.5);
-  backdrop-filter: blur(12px);
-  animation: fadeIn 0.3s ease;
-  padding: 20px;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0;}
-  to { opacity: 1;}
-}
-
-/* Modal Panel */
-.pp-modal-panel {
-  width: 100%;
-  max-width: 1250px;
-  height: 90vh;
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(14px);
-  border-radius: 14px;
-  display:flex;
-  flex-direction: column;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 35px 140px rgba(0,0,0,0.7);
-  transform: translateY(15px);
-  animation: slideUp 0.35s ease forwards;
-}
-@keyframes slideUp {
-  to { transform: translateY(0); }
-}
-
-/* Modal Header */
-.pp-modal-header {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding: 16px 20px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  background: rgba(0,0,0,0.15);
-}
-.pp-modal-header h3 {
-  margin:0;
-  font-size:1.28rem;
-  letter-spacing:0.3px;
-}
-
-/* GitHub + Close */
-.pp-actions {
-  display:flex;
-  gap:14px;
-  align-items:center;
-}
-.pp-github {
-  display:inline-flex;
-  gap:8px;
-  align-items:center;
-  padding: 10px 14px;
-  border-radius: 8px;
-  background: var(--accent-gradient);
-  color: #fff;
-  text-decoration: none;
-  font-weight:600;
-  transition: opacity 0.2s ease;
-}
-.pp-github:hover {
-  opacity: 0.8;
-}
-.pp-close {
-  background: rgba(255,255,255,0.08);
-  border: none;
-  font-size: 26px;
-  color: var(--text);
-  cursor:pointer;
-  border-radius: 6px;
+  gap: 6px;
+  border: 1px solid var(--accent);
+  border-radius: 20px;
   padding: 4px 10px;
-  transition: background 0.2s ease;
-}
-.pp-close:hover {
-  background: rgba(255,255,255,0.2);
-}
-
-/* Modal Body Layout */
-.pp-body {
-  display:flex;
-  gap: 20px;
-  height: calc(100% - 68px);
-  overflow: hidden;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
 }
 
-/* Left Column */
-.pp-left {
-  flex: 1.7;
-  padding: 18px;
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-  overflow: hidden;
-}
-
-/* Large Main Image */
-.pp-large-wrap {
-  flex: 1;
-  background: rgba(255,255,255,0.1);
-  border-radius: 10px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-}
-.pp-large-wrap img {
-  width: 100%;
-  height:100%;
+.tech-chip img {
+  width: 20px;
+  height: 20px;
   object-fit: contain;
 }
 
-/* Thumbnails */
-.pp-thumbs {
-  display:flex;
-  gap:10px;
-  align-items:center;
-  overflow-x: auto;
-  padding-bottom: 6px;
+.tech-icon-react {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
 }
-.pp-thumb {
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.btn-view {
+  background: none;
   border: none;
-  background: transparent;
-  padding: 5px;
-  cursor: pointer;
-  transition: transform 0.18s ease, box-shadow 0.2s ease;
-  min-width: 90px;
-}
-.pp-thumb img {
-  width: 90px;
-  height: 68px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-.pp-thumb.active {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0;
 }
 
-/* Right Column */
-.pp-right {
-  width: 360px;
-  min-width: 280px;
-  padding: 20px;
-  border-left: 1px solid rgba(255,255,255,0.08);
-  overflow-y: auto;
-}
-.pp-desc {
-  font-size: 0.98rem;
-  line-height:1.6;
-  color: var(--text);
-}
-.pp-tech {
-  margin-top:10px;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-.pp-tech-row i {
-  font-size:1.34rem;
-  filter: drop-shadow(0 0 4px rgba(128,0,255,0.5));
+.card-github {
+  color: var(--text-secondary);
 }
 
-/* Responsive Adjustments */
-@media (max-width: 920px) {
-  .pp-body { flex-direction: column; }
-  .pp-right {
-    width: 100%;
-    border-left: none;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    height: 230px;
+.card-github:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
-}
-@media (max-width: 480px) {
-  .pp-thumb img {
-    width: 70px;
-    height: 54px;
-  }
-}
-
-/* Disable main app interactions when modal is open */
-body.modal-active .App {
-  transform: scale(0.985);
-  filter: blur(4px) saturate(0.9);
-  pointer-events: none;
-  user-select: none;
-}
-
-/* Light Mode Adjustments */
-[data-theme="light"] .pp-modal-panel {
-  background: rgba(255,255,255,0.97);
-  border: 1px solid rgba(0,0,0,0.1);
-}
-[data-theme="light"] .pp-modal-header {
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-}
-[data-theme="light"] .pp-modal-overlay {
-  background: rgba(255,255,255,0.65);
-  backdrop-filter: blur(10px);
 }
