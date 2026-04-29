@@ -5,7 +5,6 @@ import Navbar from "../components/Navbar";
 import "./ProjectPage.css";
 
 /* === Image imports === */
-import pp1 from "../assets/PaperPulse/1.png";
 import pp2 from "../assets/PaperPulse/2.png";
 import pp3 from "../assets/PaperPulse/3.png";
 import pp4 from "../assets/PaperPulse/4.png";
@@ -19,7 +18,7 @@ import pp11 from "../assets/PaperPulse/11.png";
 import pp12 from "../assets/PaperPulse/12.png";
 import PaperPulseMain from "../assets/PaperPulse/PaperPulse.png";
 
-const screenshots = [PaperPulseMain, pp1, pp2, pp3, pp4, pp5, pp6, pp7, pp8, pp9, pp10, pp11, pp12];
+const screenshots = [PaperPulseMain, pp2, pp3, pp4, pp5, pp6, pp7, pp8, pp9, pp10, pp11, pp12];
 
 const PaperPulse = ({ theme, toggleTheme }) => {
   const [lightbox, setLightbox] = useState(null);
@@ -44,7 +43,7 @@ const PaperPulse = ({ theme, toggleTheme }) => {
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <div className="page-container">
         <Link to="/" className="back-link">← Back to Projects</Link>
-        
+
         <header className="page-header">
           <h1>PaperPulse — Academic Paper Workflow System</h1>
           <p className="page-tagline">Role-based workflow system for managing academic paper submission, peer review, and approval lifecycle.</p>

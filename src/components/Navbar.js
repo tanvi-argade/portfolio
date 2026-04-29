@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = ({ theme, toggleTheme }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,9 +17,22 @@ const Navbar = ({ theme, toggleTheme }) => {
   }, []);
 
   const handleScrollTo = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    const isHome = location.pathname === "/" || location.pathname === "";
+    
+    if (isHome) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        setIsMenuOpen(false);
+      }
+    } else {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 300);
       setIsMenuOpen(false);
     }
   };
@@ -24,6 +40,9 @@ const Navbar = ({ theme, toggleTheme }) => {
   const openResume = () => {
     window.open(`${process.env.PUBLIC_URL}/Tanvi_Argade_Resume.pdf`, "_blank");
   };
+
+  const isProjectPage = location.pathname.includes("paperpulse") || 
+                        location.pathname.includes("attendance");
 
   return (
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
@@ -40,7 +59,14 @@ const Navbar = ({ theme, toggleTheme }) => {
           <li><button onClick={() => handleScrollTo("home")}>Home</button></li>
           <li><button onClick={() => handleScrollTo("about")}>About</button></li>
           <li><button onClick={() => handleScrollTo("skills")}>Skills</button></li>
-          <li><button onClick={() => handleScrollTo("projects")}>Projects</button></li>
+          <li>
+            <button 
+              className={isProjectPage ? "nav-link active" : "nav-link"} 
+              onClick={() => handleScrollTo("projects")}
+            >
+              Projects
+            </button>
+          </li>
           <li><button onClick={() => handleScrollTo("experience")}>Experience</button></li>
           <li><button onClick={() => handleScrollTo("contact")}>Contact</button></li>
           <li className="resume-li">

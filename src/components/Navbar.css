@@ -30,7 +30,7 @@
   list-style: none;
 }
 
-.nav-links li button {
+.nav-links li button, .nav-link {
   background: none;
   border: none;
   font-size: 0.95rem;
@@ -39,7 +39,7 @@
   transition: var(--transition);
 }
 
-.nav-links li button:hover {
+.nav-links li button:hover, .nav-link:hover, .nav-link.active {
   color: var(--accent);
 }
 
@@ -64,8 +64,8 @@
   display: none;
   background: none;
   border: none;
-  width: 30px;
-  height: 30px;
+  min-width: 44px;
+  min-height: 44px;
   position: relative;
 }
 
@@ -116,7 +116,9 @@
   }
 
   .mobile-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .nav-links li {
