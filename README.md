@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# Tanvi Argade — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> Full-Stack Developer focused on backend systems, API design, and real-world workflow applications.
 
-## Available Scripts
+[![Live Portfolio](https://img.shields.io/badge/Live-Portfolio-2563EB?style=for-the-badge&logo=vercel&logoColor=white)](https://tanvi-argade.github.io/my-portfolio)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-tanvi--argade-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tanvi-argade/)
+[![GitHub](https://img.shields.io/badge/GitHub-tanvi--argade-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tanvi-argade)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## About
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This is my personal developer portfolio built to showcase my projects, technical skills, and professional background. It is designed with a clean, minimal aesthetic and focuses on backend-leaning full-stack development work.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Clean minimal design with light/dark mode toggle
+- Animated skill icons with category grouping
+- Detailed project pages with system architecture, workflow diagrams, and screenshots
+- Working contact form powered by EmailJS
+- Fully responsive across mobile and desktop
+- Deployed on GitHub Pages
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Projects Showcased
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### PaperPulse — Academic Paper Workflow System
+Role-based workflow system for managing academic paper submission, peer review, and approval lifecycle.
+- **Stack:** React.js · Node.js · Express.js · PostgreSQL · JWT · REST APIs
+- **Repo:** [github.com/tanvi-argade/Paperpulse](https://github.com/tanvi-argade/Paperpulse)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Automated Attendance System using Face Recognition
+Real-time face recognition system for automated student attendance tracking and report generation.
+- **Stack:** Python · Flask · OpenCV · SQL · REST APIs
+- **Repo:** [github.com/tanvi-argade/Automated_Attendance_System-_using_Face_Recognition](https://github.com/tanvi-argade/Automated_Attendance_System-_using_Face_Recognition)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Layer | Technologies |
+|---|---|
+| Frontend | React.js, HTML5, CSS3, JavaScript |
+| Backend | Node.js, Express.js, Python, Flask, Java |
+| Database | PostgreSQL, MySQL |
+| Auth & API | JWT, REST APIs |
+| Tools | Git, GitHub, VS Code, Linux, AWS |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Running Locally
 
-## Learn More
+```bash
+# Clone the repository
+git clone https://github.com/tanvi-argade/my-portfolio.git
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Navigate into the project
+cd my-portfolio
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Install dependencies
+npm install
 
-### Code Splitting
+# Start development server
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Deployment
 
-### Making a Progressive Web App
+This portfolio is deployed using GitHub Pages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+# Build and deploy
+npm run build
+npm run deploy
+```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contact
 
-### Deployment
+Have an opportunity or want to collaborate?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Email: tanviargade1@gmail.com
+- LinkedIn: [linkedin.com/in/tanvi-argade](https://www.linkedin.com/in/tanvi-argade/)
+- Portfolio: [tanvi-argade.github.io/my-portfolio](https://tanvi-argade.github.io/my-portfolio)
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+© 2025 Tanvi Argade
