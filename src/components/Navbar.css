@@ -126,3 +126,28 @@
     text-align: center;
   }
 }
+
+/* === new animations === */
+.nav-links li button, .nav-link {
+  position: relative;
+}
+
+.nav-links li button::after, .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-links li button:hover::after, .nav-link:hover::after, .nav-link.active::after {
+  width: 100%;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid transparent;
+}

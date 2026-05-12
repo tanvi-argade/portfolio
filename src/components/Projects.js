@@ -1,13 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { FaGithub, FaLock, FaServer } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { FaGithub, FaLock, FaServer, FaBrain } from "react-icons/fa";
 import "./Projects.css";
 
 /* === Image imports === */
 import PaperPulseMain from "../assets/PaperPulse/PaperPulse.png";
 import AttendanceMain from "../assets/AttendanceSystem/AttendanceSystem.png";
+import KrushiAIMain from "../assets/KrushiAI/logo.png";
 
 const projects = [
+  /* === KrushiAI === */
+  {
+    id: "krushiai",
+    title: "KrushiAI",
+    tagline: "AI-Powered Decision Intelligence for Modern Farming",
+    tech: ["React.js", "FastAPI", "Python", "Machine Learning", "Computer Vision"],
+    github: "https://github.com/tanvi-argade/krushiAi",
+    mainImage: KrushiAIMain,
+    link: "/krushiai"
+  },
   {
     id: "paperpulse",
     title: "PaperPulse",
@@ -39,10 +50,15 @@ const techIconMap = {
   "OpenCV": { type: "svg", icon: "opencv/opencv-original.svg" },
   "SQL": { type: "svg", icon: "mysql/mysql-original.svg" },
   "REST APIs": { type: "react-icon", icon: <FaServer /> },
+  /* === KrushiAI === */
+  "FastAPI": { type: "svg", icon: "fastapi/fastapi-original.svg" },
+  "scikit-learn": { type: "svg", icon: "scikitlearn/scikitlearn-original.svg" },
+  "MobileNetV2": { type: "react-icon", icon: <FaBrain /> },
 };
 
 const Projects = () => {
   const iconBaseUrl = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/";
+  const navigate = useNavigate();
 
   return (
     <section className="projects" id="projects">
@@ -52,17 +68,19 @@ const Projects = () => {
 
         <div className="projects-grid">
           {projects.map((p, idx) => (
-            <div 
-              className="project-card" 
-              key={p.id} 
-              data-aos="fade-up" 
+            <div
+              className="project-card"
+              key={p.id}
+              data-aos="fade-up"
               data-aos-delay={idx * 100}
+              onClick={() => navigate(p.link)}
+              style={{ cursor: "pointer" }}
             >
               <div className="card-header">
                 <h3>{p.title}</h3>
                 <p className="muted">{p.tagline}</p>
               </div>
-              
+
               <div className="card-tech">
                 {p.tech.map(t => {
                   const techData = techIconMap[t];
@@ -80,14 +98,15 @@ const Projects = () => {
               </div>
 
               <div className="card-actions">
-                <Link to={p.link} className="btn-view">
+                <span className="btn-view">
                   View Details →
-                </Link>
-                <a 
-                  href={p.github} 
-                  target="_blank" 
-                  rel="noreferrer" 
+                </span>
+                <a
+                  href={p.github}
+                  target="_blank"
+                  rel="noreferrer"
                   className="card-github"
+                  onClick={(e) => e.stopPropagation()}
                 >
                   <FaGithub size={20} />
                 </a>

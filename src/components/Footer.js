@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container footer-container">
-        <p className="footer-text">© 2025 Tanvi Argade · Built with React</p>
+        <p className="footer-text">© 2026 Tanvi Argade · Built with React</p>
         <div className="footer-links">
           <a href="https://github.com/tanvi-argade" target="_blank" rel="noreferrer"><FaGithub /></a>
           <a href="https://linkedin.com/in/tanvi-argade" target="_blank" rel="noreferrer"><FaLinkedin /></a>

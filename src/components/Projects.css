@@ -5,7 +5,7 @@
 }
 
 .project-card {
-  background-color: var(--surface);
+  background-color: var(--surface-2, var(--surface)); /* pure black dark mode */
   border: 1px solid var(--border);
   border-radius: var(--radius-card);
   padding: 32px;
@@ -37,6 +37,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  background-color: var(--accent-soft); /* purple theme update */
   border: 1px solid var(--accent);
   border-radius: 20px;
   padding: 4px 10px;
@@ -85,4 +86,30 @@
   .projects-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* === new animations === */
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  height: 0;
+  background: var(--accent);
+  transition: height 0.3s ease;
+}
+
+.project-card:hover::before {
+  height: 100%;
+}
+
+.tech-chip:hover {
+  transform: scale(1.08);
+  background-color: var(--accent-soft);
 }

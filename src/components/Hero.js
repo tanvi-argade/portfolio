@@ -20,8 +20,8 @@ const Hero = () => {
       <div className="container hero-container">
         <div className="hero-content" data-aos="fade-right">
           <p className="hero-label">Full-Stack Developer</p>
-          <h1>Tanvi Nitin Argade</h1>
-          <p className="hero-tagline">
+          <h1 className="shimmer-text typing-cursor">Tanvi Nitin Argade</h1>
+          <p className="hero-tagline typing-cursor">
             Full-Stack Developer focused on backend systems, API design, and real-world workflow applications.
           </p>
           <div className="hero-btns">

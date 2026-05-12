@@ -123,7 +123,7 @@ const AttendanceSystem = ({ theme, toggleTheme }) => {
         </section>
 
         <section className="project-section">
-          <h2>Screenshots</h2>
+          <h2>Gallery</h2>
           <div className="screenshot-grid">
             {screenshots.map((img, i) => (
               <div key={i} className="screenshot-item" onClick={() => setLightbox(img)}>

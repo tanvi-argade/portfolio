@@ -3,7 +3,7 @@
 }
 
 .exp-card {
-  background-color: var(--surface);
+  background-color: var(--surface-2, var(--surface)); /* pure black dark mode */
   border-left: 4px solid var(--accent);
   border-radius: var(--radius-card);
   padding: 32px;
@@ -41,7 +41,7 @@
 }
 
 .achievement-card {
-  background-color: var(--surface);
+  background-color: var(--surface-2, var(--surface)); /* pure black dark mode */
   border: 1px solid var(--border);
   border-radius: var(--radius-card);
   padding: 24px;

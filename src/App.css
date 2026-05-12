@@ -5,7 +5,9 @@
   --surface: #FFFFFF;
   --text-primary: #0F172A;
   --text-secondary: #64748B;
-  --accent: #2563EB;
+  --accent: #7C3AED; /* purple theme update */
+  --accent-hover: #6D28D9; /* purple theme update */
+  --accent-soft: #EDE9FE; /* purple theme update */
   --border: #E2E8F0;
   --radius-card: 12px;
   --radius-btn: 8px;
@@ -14,12 +16,15 @@
 }
 
 [data-theme="dark"] {
-  --bg: #0F172A;
-  --surface: #1E293B;
-  --text-primary: #F1F5F9;
-  --text-secondary: #94A3B8;
-  --accent: #3B82F6;
-  --border: #334155;
+  --bg: #000000; /* pure black dark mode */
+  --surface: #0A0A0A; /* pure black dark mode */
+  --surface-2: #111111; /* pure black dark mode */
+  --text-primary: #F5F5F5; /* pure black dark mode */
+  --text-secondary: #A3A3A3; /* pure black dark mode */
+  --accent: #A855F7; /* purple theme update */
+  --accent-hover: #9333EA; /* purple theme update */
+  --accent-soft: #2E1065; /* purple theme update */
+  --border: #222222; /* pure black dark mode */
 }
 
 * {
@@ -118,7 +123,7 @@ section {
 }
 
 .btn-primary:hover {
-  filter: brightness(0.9);
+  background-color: var(--accent-hover); /* purple theme update */
 }
 
 .btn-secondary {
@@ -131,7 +136,7 @@ section {
 }
 
 .btn-secondary:hover {
-  background-color: var(--accent);
+  background-color: var(--accent-hover); /* purple theme update */
   color: #FFFFFF;
 }
 
@@ -161,5 +166,26 @@ section {
   }
   section {
     padding: 60px 0;
+  }
+}
+
+/* === new animations === */
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+section {
+  animation: sectionFadeIn 0.6s ease-out forwards;
+}
+
+@keyframes sectionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -16,6 +16,8 @@ import Footer from "./components/Footer";
 // Page Imports
 import PaperPulse from "./pages/PaperPulse";
 import AttendanceSystem from "./pages/AttendanceSystem";
+/* === KrushiAI === */
+import KrushiAI from "./pages/KrushiAI";
 
 const Home = ({ theme, toggleTheme }) => {
   return (
@@ -61,6 +63,8 @@ function App() {
           <Route path="/" element={<Home theme={theme} toggleTheme={toggleTheme} />} />
           <Route path="/paperpulse" element={<PaperPulse theme={theme} toggleTheme={toggleTheme} />} />
           <Route path="/attendance" element={<AttendanceSystem theme={theme} toggleTheme={toggleTheme} />} />
+          {/* === KrushiAI === */}
+          <Route path="/krushiai" element={<KrushiAI theme={theme} toggleTheme={toggleTheme} />} />
         </Routes>
       </HashRouter>
     </div>
